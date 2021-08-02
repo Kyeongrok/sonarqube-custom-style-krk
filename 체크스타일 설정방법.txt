@@ -1,0 +1,29 @@
+체크스타일 : 자바코드를 작성할때 일반적으로 지켜야 한느 코딩 표준을 잘 준수할수 있도록 지원하는 유틸이다.
+
+-> 필요이유 : 소나큐브에서 커스텀 규칙을 적용시키기 어렵기 때문(특정언어에 제약)
+
+규칙의 예로는 클래스 명칭, 함수명에 규칙, 코멘트 큐칙 등등이 있다.
+
+■ 라이브러리 다운로드 : https://checkstyle.org/#Download
+
+
+https://dololgun.github.io/checkstyle/checkstyle-sonarqube-plugin2/
+
+
+■ 위치는 도커파일 안에 있다.
+docker file 내부 : /opt/sonarqube/extensions/plugin/
+local path : /data/sonarqube/extensions/plugin/
+
+
+■ 플러그인 조건
+플러그인을 빌드하려면 java8 , maven 3.1 이상 필요
+gardle은 soanrqube에서 정식 지원하지 않는다.
+
+■ Java 사용하여 코딩 규칙 추가
+1) soanrqube 플러그인 만들기
+2) 코딩 규칙을 작성 언어 플러그인의 api 에 종속성설정
+3) 사용자 지정 규칙 생성
+4) sonarqube 플러긍니 생성
+5) 동일하게 디렉토리 배치
+6) soanrqube 다시시작
+
